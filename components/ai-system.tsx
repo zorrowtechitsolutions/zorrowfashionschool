@@ -54,10 +54,7 @@ export default function AISystem() {
         className="fixed bottom-8 right-8 z-[101]
         w-16 h-16 rounded-full
         flex items-center justify-center
-        bg-gradient-to-br from-pink- to-pink-600
-        -[0_0_35px_rgba(236,72,153,0.7)]
-        hover:scale-110 hover:-translate-y-1
-        hover:shadow-[0_0_50px_rgba(236,72,153,0.9)]
+         from-pink- to-pink-600
         transition-all duration-300"
         aria-label="Toggle AI Fashion Assistant"
       >
