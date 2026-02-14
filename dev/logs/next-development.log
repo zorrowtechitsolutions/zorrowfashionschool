@@ -1,0 +1,7 @@
+[00:00:00.438] Server  LOG     ✓ Ready in 280ms
+[00:00:01.277] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.836] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:19.090] Server  LOG     Received form data: {}
+[00:00:20.202] Server  ERROR   Email sending error: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-824c6b69ee6sm2739880b3a.32 - gsmtp
+[00:01:19.577] Server  LOG       Reload env: .env
