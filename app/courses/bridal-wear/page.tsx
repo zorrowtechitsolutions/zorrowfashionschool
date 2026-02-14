@@ -31,7 +31,7 @@ export default function BridalWearPage() {
             {/* Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="text-5xl mb-4">👰</div>
+                <div className="text-5xl mb-4"></div>
                 <h1 className="text-5xl md:text-6xl font-serif font-bold text-pink-300">
                   Bridal Wear Design
                 </h1>
