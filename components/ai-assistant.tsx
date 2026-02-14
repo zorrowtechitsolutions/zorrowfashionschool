@@ -53,7 +53,7 @@ export default function AIAssistant() {
 
   const bottomRef = useRef<HTMLDivElement>(null)
 
-  /* Load Memory */
+  /* Load Chat Memory */
   useEffect(() => {
     const saved = localStorage.getItem('zorrow_ai_chat')
     if (saved) {
@@ -63,7 +63,7 @@ export default function AIAssistant() {
     }
   }, [])
 
-  /* Save Memory */
+  /* Save Chat Memory */
   useEffect(() => {
     if (messages.length > 0) {
       localStorage.setItem('zorrow_ai_chat', JSON.stringify(messages))
@@ -109,7 +109,7 @@ export default function AIAssistant() {
 
       setMessages(prev => [...prev, botResponse])
       setIsTyping(false)
-    }, 1000)
+    }, 900)
   }
 
   return (
@@ -117,27 +117,28 @@ export default function AIAssistant() {
       className="
       glass
       rounded-3xl
-      w-[95vw]
-      sm:w-[360px]
-      md:w-[400px]
+      w-[94vw]
+      max-w-[380px]
+      md:w-[380px]
       shadow-2xl
       flex
       flex-col
-      h-[72vh]
+      h-[70vh]
       max-h-[520px]
       overflow-hidden
       border border-pink-500/20
-      animate-in fade-in slide-in-from-bottom-5 duration-300
+      backdrop-blur-xl
+      transition-all duration-300
     "
     >
 
       {/* HEADER */}
-      <div className="flex items-center gap-3 px-4 py-3 border-b border-pink-500/30 bg-gradient-to-r from-pink-500/20 to-pink-400/10 backdrop-blur-xl">
+      <div className="flex items-center gap-3 px-4 py-3 border-b border-pink-500/30 bg-gradient-to-r from-pink-500/20 to-pink-400/10">
         <Image
           src="/logo.png"
           alt="ZORROW"
-          width={42}
-          height={42}
+          width={38}
+          height={38}
           className="object-contain"
         />
         <div>
@@ -159,10 +160,10 @@ export default function AIAssistant() {
             className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             <div
-              className={`max-w-[80%] whitespace-pre-line px-4 py-3 rounded-2xl text-sm leading-relaxed transition-all duration-300 ${
+              className={`max-w-[85%] whitespace-pre-line px-4 py-3 rounded-2xl text-[13px] leading-relaxed transition-all duration-300 ${
                 message.type === 'user'
                   ? 'bg-gradient-to-br from-pink-500 to-pink-600 text-black rounded-br-none shadow-lg'
-                  : 'bg-white/10 backdrop-blur-xl text-slate-200 rounded-bl-none'
+                  : 'bg-white/10 text-slate-200 rounded-bl-none'
               }`}
             >
               {message.text}
@@ -172,7 +173,7 @@ export default function AIAssistant() {
 
         {isTyping && (
           <div className="flex justify-start">
-            <div className="bg-white/10 backdrop-blur-xl px-4 py-3 rounded-2xl rounded-bl-none text-slate-300 text-sm animate-pulse">
+            <div className="bg-white/10 px-4 py-3 rounded-2xl rounded-bl-none text-slate-300 text-[13px] animate-pulse">
               ZORROW AI is typing...
             </div>
           </div>
@@ -182,7 +183,7 @@ export default function AIAssistant() {
       </div>
 
       {/* INPUT */}
-      <div className="border-t border-pink-500/30 p-3 bg-slate-900/40 backdrop-blur-xl">
+      <div className="border-t border-pink-500/30 p-3 bg-slate-900/40">
         <div className="flex gap-2">
 
           <input
@@ -191,12 +192,12 @@ export default function AIAssistant() {
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
             placeholder="Ask about courses..."
-            className="flex-1 px-3 py-2 rounded-xl bg-white/10 border border-white/20 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-pink-500 text-sm transition-all duration-300"
+            className="flex-1 px-3 py-2 rounded-xl bg-white/10 border border-white/20 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-pink-500 text-[13px] transition-all duration-300"
           />
 
           <button
             onClick={handleSendMessage}
-            className="bg-gradient-to-br from-pink-500 to-pink-600 hover:from-pink-400 hover:to-pink-500 rounded-xl px-4 py-2 flex items-center justify-center shadow-lg transition-all duration-300"
+            className="bg-gradient-to-br from-pink-500 to-pink-600 hover:from-pink-400 hover:to-pink-500 rounded-xl px-4 py-2 flex items-center justify-center shadow-md transition-all duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
