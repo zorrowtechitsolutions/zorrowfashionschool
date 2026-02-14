@@ -18,8 +18,7 @@ export default function Navigation() {
               className="w-10 h-10 rounded-lg 
               bg-gradient-to-br from-pink- to-pink-600 
               flex items-center justify-center
-              shadow-[0_0_15px_rgba(236,72,153,0.6)]
-              hover:shadow-[0_0_25px_rgba(236,72,153,0.9)]
+    
               transition-all duration-300"
             >
               <Image
@@ -52,12 +51,13 @@ export default function Navigation() {
               Admissions
             </Link> */}
 
-            <Link
-              href="#admissions"
-              className="bg-pink-500 hover:bg-pink-600 text-black px-6 py-2 rounded-full font-semibold hover:scale-105 hover:-translate-y-1 transition-all duration-300 text-sm"
-            >
-              Apply Now
-            </Link>
+        <Link
+  href="#admissions"
+  className="bg-pink-400 text-black px-6 py-2 rounded-full font-medium transition-colors duration-200 text-sm"
+>
+  Apply Now
+</Link>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,12 +88,13 @@ export default function Navigation() {
               Admissions
             </Link>
 
-            <Link
-              href="#admissions"
-              className="bg-pink-500 hover:bg-pink-600 text-black px-6 py-2 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-sm w-full text-center"
-            >
-              Apply Now
-            </Link>
+<Link
+  href="#admissions"
+  className="bg-pink-400 hover:bg-pink-500 text-black px-6 py-2 rounded-full font-medium shadow-sm hover:shadow-md transition-all duration-200 text-sm w-full text-center"
+>
+  Apply Now
+</Link>
+
           </div>
         )}
       </div>
