@@ -37,7 +37,7 @@ export default function BoutiqueManagementPage() {
             {/* Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="text-5xl">🏪</div>
+                <div className="text-5xl"></div>
                 <h1 className="text-5xl md:text-6xl font-serif font-bold text-pink-300">
                   Boutique Management
                 </h1>
