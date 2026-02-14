@@ -137,8 +137,8 @@ export default function AIAssistant() {
         <Image
           src="/logo.png"
           alt="ZORROW"
-          width={38}
-          height={38}
+          width={68}
+          height={68}
           className="object-contain"
         />
         <div>
